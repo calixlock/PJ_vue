@@ -1,4 +1,6 @@
+# 스프링부트 REST API를 이용하여 쇼핑몰 만들기
 
+참고 : [영상 링크](https://youtube.com/watch?v=htYYSszfzv0) 
 
 # frontend
 
