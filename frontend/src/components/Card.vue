@@ -21,7 +21,7 @@
           {{lib.getNumberFormatted(item.price)}}
         </small>
 
-        <small class="realPrice fs-4">
+        <small class="realPrice fs-5">
           {{lib.getNumberFormatted(item.price*(100-item.discountPer)/100)}}
         </small>
       </div>
@@ -46,11 +46,12 @@ export default {
 .card .img{
   display: inline-block;
   width: 100%;
-  height: 300px;
-  background : no-repeat;
+  height: 250px;
+  background : no-repeat center;
   background-size: contain;
-  //object-fit:cover;
-  background-position: center;
+
+  //background-size: cover;  //object-fit:cover;
+  //background-position: center;
 }
 .card .card-body .price{
   text-decoration: line-through;
