@@ -1,21 +1,21 @@
 <template>
   <Header/>
-  <Home/>
+<!--  <Home/> 직접지정-->
+  <RouterView/>
   <Footer/>
 <!--  <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>-->
-
 </template>
 
 <script>
 
 import Header from "@/components/Header.vue";
 import Footer from "@/components/Footer.vue";
-import Home from "@/pages/Home.vue";
+// import Home from "@/pages/Home.vue";
 
 export default {
   name: 'App',
   components: {
-    Home,
+    // Home,
     Footer,
     Header
   }

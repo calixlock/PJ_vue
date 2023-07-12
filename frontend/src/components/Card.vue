@@ -47,7 +47,8 @@ export default {
   display: inline-block;
   width: 100%;
   height: 300px;
-  background-size: cover;
+  background : no-repeat;
+  background-size: contain;
   //object-fit:cover;
   background-position: center;
 }
