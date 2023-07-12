@@ -1,8 +1,4 @@
 <template>
-  <h1>
-    This is loginPage !!!
-  </h1>
-
   <div class="form-signin w-100 m-auto">
     <form>
 <!--      <img class="mb-4" src="/docs/5.3/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">-->
