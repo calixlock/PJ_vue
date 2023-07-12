@@ -3,15 +3,26 @@
     <span class="img" :style="{backgroundImage: `url(${item.imgPath})`}" />
 <!--    <img :src="item.imgPath" />-->
     <div class="card-body">
-      <p class="card-text"> {{item.name}} </p>
+      <p class="card-text">
+        <span class="discount badge bg-danger">
+          <div class="discount-text fs-7">
+            -{{item.discountPer}}%
+          </div>
+        </span>
+        &nbsp;{{item.name}}
+      </p>
       <div class="d-flex justify-content-between align-items-center">
 <!--        <div class="btn-group">-->
 <!--          <button type="button" class="btn btn-sm btn-outline-secondary">View</button>-->
 <!--          <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>-->
           <button class="btn btn-primary">구입하기</button>
 <!--        </div>-->
-        <small class="text-muted">
+        <small class="price text-muted">
           {{lib.getNumberFormatted(item.price)}}
+        </small>
+
+        <small class="realPrice fs-4">
+          {{lib.getNumberFormatted(item.price*(100-item.discountPer)/100)}}
         </small>
       </div>
     </div>
@@ -39,5 +50,8 @@ export default {
   background-size: cover;
   //object-fit:cover;
   background-position: center;
+}
+.card .card-body .price{
+  text-decoration: line-through;
 }
 </style>
