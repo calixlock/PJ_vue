@@ -1,8 +1,6 @@
-import {createApp} from 'vue'
-import App from './App.vue'
-import {createRouter, createWebHistory} from 'vue-router'
 import Home from "@/pages/Home.vue";
 import login from "@/pages/login.vue";
+import {createRouter, createWebHistory} from "vue-router";
 
 const routes = [
     {path: '/', component: Home},
@@ -14,4 +12,4 @@ const router = createRouter({
     routes: routes, //routes만 써도 같은 의미;
 })
 
-createApp(App).use(router).mount('#app')
+export default router;

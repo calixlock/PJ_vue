@@ -30,6 +30,7 @@
 <script scoped>
 import {reactive} from "vue";
 import axios from "axios";
+import store from "@/scripts/store";
 
 export default {
   setup(){
@@ -42,7 +43,7 @@ export default {
     const submit = () => {
       axios.post("/api/account/login",state.form)
           .then((res)=>{
-            console.log(res);
+            store.commit('setAccount',res.data);
             window.alert("login complete.");
           })
     }
