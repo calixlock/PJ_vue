@@ -8,17 +8,25 @@
 </head>
 
 <body>
-    <div id="app">{{ message }}</div>
 
     <!-- 방식1 -->
-    <!-- <script type="module">
-        import { createApp } from "https://unpkg.com/vue@3/dist/vue.global.js"
-        const app = createApp();
-        console.log(app)
-    </script> -->
+    <div id="app">{{ message }}</div>
+
+    <script type="module">
+        import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+
+        createApp({
+            setup() {
+                const message = ref('Hello Vue!')
+                return {
+                    message
+                }
+            }
+        }).mount('#app')
+    </script>
 
     <!-- 방식2 -->
-    <script type="text/javascript" src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- <script type="text/javascript" src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script>
         const { createApp, ref } = Vue
         createApp({
@@ -30,7 +38,7 @@
                 }
             }
         }).mount('#app')
-    </script>
+    </script> -->
 
 
 </body>
