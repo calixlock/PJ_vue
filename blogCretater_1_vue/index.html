@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title 미정</title>
+</head>
+
+<body>
+    <div id="app">{{ message }}</div>
+
+    <!-- 방식1 -->
+    <!-- <script type="module">
+        import { createApp } from "https://unpkg.com/vue@3/dist/vue.global.js"
+        const app = createApp();
+        console.log(app)
+    </script> -->
+
+    <!-- 방식2 -->
+    <script type="text/javascript" src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script>
+        const { createApp, ref } = Vue
+        createApp({
+            setup() {
+                const app = createApp();
+                const message = ref(app)
+                return {
+                    message
+                }
+            }
+        }).mount('#app')
+    </script>
+
+
+</body>
+
+</html>
