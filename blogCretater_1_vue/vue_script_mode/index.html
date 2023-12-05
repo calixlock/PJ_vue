@@ -16,11 +16,29 @@
         import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
         const root = {
-            template: "<h1>root component 생성</h1>"
+            template: `<h1>root component 생성</h1>
+            <A></A>
+            <B></B>
+            <C></C>
+            `,
         };
+        const a = {
+            template: "<div>header 내용</div>"
+        }
+        const b = {
+            template: "<div>main 내용</div>"
+        }
+        const c = {
+            template: "<div>footer 내용</div>"
+        }
 
         const app = createApp(root); // createApp(component)
+
         console.log(app)
+
+        app.component("A", a);
+        app.component("B", b);
+        app.component("C", c);
         app.mount('#app'); // component와 매칭
         /*
         createApp({ 
