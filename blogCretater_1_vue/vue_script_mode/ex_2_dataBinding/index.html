@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DataBinding</title>
+</head>
+
+<body>
+  <div id="app">{{ message }}</div>
+  <script type="module">
+    import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    const root = {
+      template: `
+      <h1>{{ myGreet }}</h1>
+      <h1>{{ myGreet }}</h1>
+      <button @click="sayHello">{{ myGreet }}</button>
+      `,
+
+      setup() {
+        const greet = "hello";
+        const sayHello = () => {
+          console.log("hello~")
+        }
+        return {
+          myGreet: greet, sayHello
+        };
+      }
+    }
+    const app = createApp(root)
+    app.mount('#app')
+  </script>
+</body>
+
+</html>
