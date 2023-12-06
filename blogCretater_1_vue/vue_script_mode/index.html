@@ -15,6 +15,11 @@
     <script type="module">
         import { createApp, ref } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
+        import siteHeader from "./a_SiteHeader.js"
+        import siteMain from "./b_SiteMain.js"
+        import siteFooter from "./c_SiteFooter.js"
+
+
         const root = {
             template: `<h1>root component 생성</h1>
             <!--기본 html 태그와 항상 겹치지 않는 태그이름 / 충돌발생 가능 -->
@@ -23,23 +28,13 @@
             <C></C>
             `,
         };
-        const a = {
-            template: "<div>header 내용</div>"
-        }
-        const b = {
-            template: "<div>main 내용</div>"
-        }
-        const c = {
-            template: "<div>footer 내용</div>"
-        }
-
         const app = createApp(root); // createApp(component)
 
         console.log(app)
 
-        app.component("A", a);
-        app.component("B", b);
-        app.component("C", c);
+        app.component("A", siteHeader);
+        app.component("B", siteMain);
+        app.component("C", siteFooter);
         app.mount('#app'); // component와 매칭
         /*
         createApp({ 
