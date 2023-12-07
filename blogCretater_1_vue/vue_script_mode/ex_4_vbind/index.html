@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .active {
+      background-color: yellow;
+    }
+
+    .disabled {
+      color: red
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">None</div>
+  <button @click="toggleActive">Toggle Active</button>
+  <button @click="toggleDisabled">Toggle Disabled</button>
+
+  <script type="module">
+    import { createApp, ref, reactive } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    const root = {
+      template: `
+      <a v-bind:class="myClass"></a>
+      <div v-bind:[name]="value"></div>
+      <div :[name2]="value2"></div>
+      <input
+        :autofocus="isAutoFocus"
+        :disabled="isDisabled"
+        :readonly="isReadOnly" />
+      <h3 :class="test">test중</h3>
+      <h1 :style="{
+        backgroundColor: 'blue',
+        'font-size': size.value + 'px',
+      }">
+      hello
+    </h1>
+      `,
+      setup() {
+
+        return {
+          myClass: "class1", // myClass > class1으로 변경됨
+          name: "property", // tag의 property(속성)
+          value: "Kim",
+          name2: "id",
+          value2: "Tom",
+          // 속성값이 없는 경우 넣고 빼는 boolean 이용
+          isAutoFocus: 1,
+          isDisabled: 0,
+          isReadOnly: true,
+
+          test: reactive({
+            active: !true,
+            disabled: !false,
+          }),
+          size: reactive({
+            value: 20,
+          })
+
+        };
+      }
+    }
+
+    const app = createApp(root);
+    app.mount("#app")
+  </script>
+</body>
+
+</html>
