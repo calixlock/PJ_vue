@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div id="app">{{ message }}</div>
+  <script type="module">
+    import { createApp, ref, reactive } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
+    const root = {
+      template: `
+      <h1>{{ proxy.msg }}</h1>
+      `,
+      setup() {
+        let proxy = reactive({ msg: "3초 뒤 변경됨" })
+
+        console.log(proxy);
+
+        setTimeout(() => {
+          proxy.msg = "3초 후";
+        }, 3000)
+        return {
+          proxy,
+        };
+      }
+    }
+
+    const app = createApp(root);
+    app.mount("#app")
+  </script>
+</body>
+
+</html>

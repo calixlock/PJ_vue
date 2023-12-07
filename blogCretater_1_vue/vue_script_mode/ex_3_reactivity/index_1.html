@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proxy</title>
+</head>
+
+<body>
+  <a></a>
+
+  <script type="text/javascript">
+    // target > proxy object
+    // property > 해당 속성
+    // value > 변경될 값
+    const proxy = new Proxy(
+      { test1: "test1 초기 문구 실행" },
+      {
+        get(target, property) {
+          console.log("proxy의 get 실행") // 추가기능
+          return target[property] // 기존기능
+        },
+        set(target, property, value) {
+          console.log("proxy의 set 실행") // 추가기능
+          target[property] = value // 기존기능
+
+          const changeText = document.querySelector("a")
+          changeText.innerText = value;
+        },
+      }
+    )
+    proxy.test1 = "test1의 바뀐 문구 실행"
+    console.log(proxy.test1);
+    console.log(proxy)
+
+    setTimeout(() => {
+      proxy.test1 = "변경됨"
+    }, 3000)
+  </script>
+</body>
+
+</html>
