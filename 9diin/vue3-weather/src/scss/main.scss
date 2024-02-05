@@ -1,12 +1,33 @@
-$color--black: #000;
-$color--white: #fff;
-
-body {
-  background-color: $color--black;
-  h1 {
-    color: $color--white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+@mixin center() {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin center-sb() {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin center-se() {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+@mixin c-center() {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@mixin c-center-sb() {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin c-center-se() {
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
