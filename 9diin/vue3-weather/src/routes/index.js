@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistroy } from "vue-router";
-import Home from "~/pages/Home";
+import Home from "~/pages/Home.vue";
 
 export default createRouter({
   // hash모드 : 특정 페이지에서 새로고침 시 '페이지 찾을수 없음'을 방지
