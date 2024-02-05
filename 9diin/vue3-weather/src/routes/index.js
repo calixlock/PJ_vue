@@ -1,9 +1,9 @@
-import { createRouter, createWebHashHistroy } from "vue-router";
-import Home from "~/pages/Home.vue";
+import { createRouter, createWebHashHistory } from "vue-router";
+import Home from "~/pages/Home";
 
 export default createRouter({
   // hash모드 : 특정 페이지에서 새로고침 시 '페이지 찾을수 없음'을 방지
-  history: createWebHashHistroy(),
+  history: createWebHashHistory(),
 
   // pages : page를 구분해주는 기능을 routes로 구현
   routes: [
@@ -11,7 +11,7 @@ export default createRouter({
       //page path
       path: "/",
       name: Home,
-      components: Home,
+      component: Home,
     },
   ],
 });

@@ -1,6 +1,8 @@
 ## 참고자료(출처)
 
-##### https://www.youtube.com/watch?v=YfOGfSd31A0
+##### ◆ 영상 : https://www.youtube.com/watch?v=YfOGfSd31A0
+
+##### ◆ git : https://github.com/SON7AE/YouTube_Weather
 
 ---
 
