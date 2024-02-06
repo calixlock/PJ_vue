@@ -1,11 +1,15 @@
 <template>
   <div class="wrap">
-    <div class="container">aa</div>
+    <div class="container"></div>
+    <MainView />
   </div>
 </template>
 
 <script>
-export default {};
+import MainView from "../components/MainView.vue";
+export default {
+  components: { MainView },
+};
 </script>
 
 <!-- css 문법스타일 : scss / scoped : 현재 위치만 스타일 적용 -->
