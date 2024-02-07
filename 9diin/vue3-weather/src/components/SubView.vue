@@ -34,6 +34,7 @@
         </div>
       </div>
     </div>
+    <Map />
     <nav>
       <!-- fontAwesome 적용 / index.html에 fontAwesome CDN link적용-->
       <i class="fas fa-home"></i>
@@ -45,5 +46,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  components: {
+    Map,
+  },
+};
 </script>
