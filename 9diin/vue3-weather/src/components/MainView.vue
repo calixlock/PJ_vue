@@ -6,7 +6,7 @@
         <p>2024-02-05</p>
       </div>
     </div>
-    <div id="containerBox">
+    <div id="contentsBox">
       <div class="buttonBox">
         <div class="buttonBackground">
           <button class="forecast">forecast</button>
@@ -65,9 +65,38 @@ export default {};
 
 .leftContainer {
   width: 324px;
-  height: 788px;
+  min-width: 324px;
+  height: 700px;
   border-radius: 50px;
   background: linear-gradient(#16455f, #0e1239);
   box-shadow: 5px 5px 10px gray;
+
+  #cityNameBox {
+    width: 100%;
+    height: 10%;
+
+    .cityName {
+      @include c-center;
+      width: 100%;
+      height: 100%;
+      p {
+        color: white;
+        font-family: "Poppins", sans-serif;
+        line-height: 2.5;
+        text-align: center;
+        &:first-child {
+          width: 241px;
+          height: 33px;
+          font-size: 1.5rem;
+        }
+        &:last-child {
+          width: 160px;
+          height: 19px;
+          font-size: 0.9rem;
+          font-weight: 100;
+        }
+      }
+    }
+  }
 }
 </style>

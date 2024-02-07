@@ -11,7 +11,6 @@ export default {
   components: { MainView },
 };
 </script>
-
 <!-- css 문법스타일 : scss / scoped : 현재 위치만 스타일 적용 -->
 <style lang="scss" scoped>
 // @import "~/scss/main.scss";
