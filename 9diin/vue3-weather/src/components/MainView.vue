@@ -21,9 +21,13 @@
           <img src="~/assets/logo.png" alt="LogoImg" srcset="" />
         </div>
         <div class="weatherData">
-          <div class="detailData">
-            <p>data1</p>
-            <p>data2</p>
+          <div
+            v-for="Temporary in TemporaryData"
+            :key="Temporary.title"
+            class="detailData"
+          >
+            <p>{{ Temporary.title }}</p>
+            <p>{{ Temporary.value }}</p>
           </div>
         </div>
       </div>
@@ -59,7 +63,27 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      // 임시데이터 틀잡아두기
+      TemporaryData: [
+        {
+          title: "습도",
+          value: "88%",
+        },
+        {
+          title: "풍속",
+          value: "10m/s",
+        },
+        {
+          title: "풍향",
+          value: "WS",
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -163,6 +187,7 @@ export default {};
         @include c-center;
         width: 33.33%;
         height: 100%;
+        // 레이아웃 3개로 동일한 레이아웃을 반복시킴
         &:nth-child(1) {
           margin-left: 10px;
         }
