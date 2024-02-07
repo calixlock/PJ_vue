@@ -216,5 +216,91 @@ export default {
       }
     }
   }
+  #todayWeather {
+    // background-color: blue;
+    width: 100%;
+    height: 17.5%;
+    .textBox {
+      @include center-sb;
+      // background-color: white;
+      width: calc(100%-70px);
+      height: 35%;
+      padding: 0 35px;
+      font-family: "Noto Sans KR", sans-serif;
+      p {
+        font-weight: 400;
+        font-size: 0.8rem;
+        color: white;
+        text-align: center;
+        &:last-child {
+          // background-color: red;
+          font-weight: 400;
+          font-size: 0.8rem;
+          color: #0085ff;
+          cursor: pointer;
+          margin-bottom: 1px;
+        }
+      }
+    }
+    .timelyWeatherBox {
+      // background-color: blue;
+      display: flex;
+      align-items: center;
+      width: calc(100% - 70px);
+      padding: 0 30px;
+      height: 65%;
+    }
+    .timelyWeather {
+      display: flex;
+      width: 126px;
+      height: 70px;
+      background-color: #0989ff;
+      border-radius: 20px;
+      margin-left: 15px;
+      &:first-child {
+        margin-left: 0;
+      }
+      .icon {
+        @include center;
+        // background-color: red;
+        width: 45%;
+        height: 100%;
+        img {
+          width: 100%;
+        }
+      }
+      .data {
+        @include c-center-se;
+        width: 55%;
+        height: 100%;
+        p {
+          color: whitesmoke;
+          font-family: "Poppins", sans-serif;
+          text-align: center;
+          &.time {
+            font-size: 0.8rem;
+            font-weight: 200;
+            margin-top: 7.5px;
+          }
+          &.currentDegree {
+            font-size: 1.2rem;
+            margin-top: 7.5px;
+          }
+        }
+        div {
+          @include center;
+          width: 100%;
+          height: 33.33%;
+          img {
+            height: 55%;
+          }
+          .fall {
+            font-size: 0.9rem;
+            margin-top: 1.5px;
+          }
+        }
+      }
+    }
+  }
 }
 </style>
