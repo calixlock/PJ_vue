@@ -22,7 +22,6 @@
             <p>Detail Temperatures</p>
           </div>
           <div class="data">
-            ]\
             <div class="dataName">
               <p></p>
               <p></p>
@@ -52,3 +51,8 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+@import "../scss/main.scss";
+@import "../scss/subView.scss";
+</style>

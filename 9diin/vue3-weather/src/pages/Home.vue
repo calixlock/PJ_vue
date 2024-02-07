@@ -1,19 +1,21 @@
 <template>
   <div class="wrap">
-    <div class="container"></div>
-    <MainView />
+    <div class="container">
+      <MainView />
+      <SubView />
+    </div>
   </div>
 </template>
 
 <script>
 import MainView from "../components/MainView.vue";
+import SubView from "../components/SubView.vue";
 export default {
-  components: { MainView },
+  components: { MainView, SubView },
 };
 </script>
 <!-- css 문법스타일 : scss / scoped : 현재 위치만 스타일 적용 -->
 <style lang="scss" scoped>
-// @import "~/scss/main.scss";
 @import "../scss/main.scss";
 
 .wrap {

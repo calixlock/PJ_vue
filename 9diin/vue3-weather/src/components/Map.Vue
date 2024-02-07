@@ -7,9 +7,10 @@
 <script>
 export default {};
 </script>
+
 <style lang="scss" scoped>
 @import "../scss/main.scss";
-/* @import "~/scss/main.scss"; */
+
 #mapContainer {
   @include center;
   width: 100%;
