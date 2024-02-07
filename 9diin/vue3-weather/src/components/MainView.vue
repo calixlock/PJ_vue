@@ -54,10 +54,11 @@
       </div>
     </div>
     <nav>
-      <i class=""></i>
-      <i class=""></i>
-      <i class=""></i>
-      <i class=""></i>
+      <!-- fontAwesome 적용 / index.html에 fontAwesome CDN link적용-->
+      <i class="fas fa-home"></i>
+      <i class="fas fa-search-location"></i>
+      <i class="fas fa-chart-line"></i>
+      <i class="fas fa-cog"></i>
     </nav>
   </div>
 </template>
@@ -299,6 +300,23 @@ export default {
             margin-top: 1.5px;
           }
         }
+      }
+    }
+  }
+  nav {
+    // background-color: blue;
+    @include center-sb;
+    width: calc(100% - 100px);
+    height: 10%;
+    padding: 0 50px;
+    i {
+      // color: white;
+      color: rgb(255, 255, 255);
+      font-size: 1.15rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      &:hover {
+        color: #799ed0;
       }
     }
   }
