@@ -1,5 +1,6 @@
 <template>
   <div>{{ count }}</div>
+  <h1>Vue_js lifeCycle testing</h1>
 </template>
 
 <script>
@@ -15,6 +16,12 @@ export default {
   },
   created() {
     console.log("lifecycle is created : ", this.count);
+  },
+  beforeMount() {
+    console.log("lifecycle is beforeMount : ", document.querySelector("h1"));
+  },
+  mounted() {
+    console.log("lifecycle is mounted : ", document.querySelector("h1"));
   },
 };
 </script>
