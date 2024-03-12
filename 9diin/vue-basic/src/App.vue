@@ -1,5 +1,5 @@
 <template>
-  <div>{{ count }} }}</div>
+  <div>{{ count }}</div>
 </template>
 
 <script>
@@ -8,6 +8,13 @@ export default {
     return {
       count: 0,
     };
+  },
+  // life cycle test
+  beforeCreate() {
+    console.log("lifecycle is beforeCreate : ", this.count);
+  },
+  created() {
+    console.log("lifecycle is created : ", this.count);
   },
 };
 </script>
