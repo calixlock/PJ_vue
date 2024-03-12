@@ -1,11 +1,10 @@
 <template>
   <div>
-    <div>count : {{ count }}</div>
-    <div v-if="count % 2 == 0 && count != 0" class="red"></div>
-    <div v-else-if="count % 2 != 0 && count != 0" class="blue"></div>
-    <div v-else class="yellow"></div>
-    <button @click="add">+</button>
-    <button @click="minus">-</button>
+    <!-- v-show : 항상 렌더링 되어 DOM에 남아있다 / display css속성만 전환됨 -->
+    <div v-show="isVisible" class="red"></div>
+    <div v-show="!isVisible" class="blue"></div>
+    <!-- v-if : 조건이 만족 할때만 렌더링 된다 -->
+    <div v-if="isVisible" class="yellow"></div>
   </div>
 </template>
 
@@ -13,18 +12,10 @@
 export default {
   data() {
     return {
-      isVisible: true,
-      count: 0,
+      isVisible: false,
     };
   },
-  methods: {
-    add() {
-      this.count++;
-    },
-    minus() {
-      this.count--;
-    },
-  },
+  methods: {},
 };
 </script>
 
