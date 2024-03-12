@@ -2,6 +2,8 @@
 
 > 9Diin | https://www.youtube.com/watch?v=9lWaIhE05m8
 
+> v-for | https://mytory.net/archives/15356
+
 ### Install & Run project
 
 ```bash
