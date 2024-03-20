@@ -4,7 +4,6 @@
   "description": "this is first project",
   "main": "index.js",
   "scripts": {
-
     "test": "node test.js"
   },
   "author": "",
