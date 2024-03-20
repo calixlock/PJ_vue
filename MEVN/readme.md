@@ -7,7 +7,7 @@
 - 지은이
   - 주홍철
     - blog https://blog.naver.com/jhc9639/
-    - git : https://githuv.com/wnghdcjfe/MEVN/
+    - git : https://github.com/wnghdcjfe/MEVN/
 
 ---
 
