@@ -1,19 +1,19 @@
 console.log("test.js실행 되었습니다. package.json/scripts test중입니다");
 // function test
-const f1 = (e, idx) => console.log(`idx : ${idx} / e : ${e}, this: ${this}`);
+// const f1 = (e, idx) => console.log(`idx : ${idx} / e : ${e}, this: ${this}`);
 // const f2 = (n1, n2, n3, n4) => {
 //   console.log(`n1 : ${n1}, n2 : ${n2}, n3 : ${n3}, n4 : ${n4}`);
 //   return n1 + n2;
 // };
 const f2 = (n1) => {
-  // console.log(`n1 : ${n1}`);
+  console.log(`n1 : ${n1}`);
   return n1;
 };
-lit_a1 = [1, 2, 3, 4, 5];
-let b1 = lit_a1.forEach(f1);
-let b2 = lit_a1.map(f2); // params (value,idx,lit_a)
-let b3 = lit_a1.reduce((a, b) => a + b);
-let b4 = lit_a1.filter((i) => i % 2); // 참인것만 남긴다
+// lit_a1 = [1, 2, 3, 4, 5];
+// let b1 = lit_a1.forEach(f1);
+// let b2 = lit_a1.map(f2); // params (value,idx,lit_a)
+// let b3 = lit_a1.reduce((a, b) => a + b);
+// let b4 = lit_a1.filter((i) => i % 2); // 참인것만 남긴다
 
 //----------------------------------------------------------------
 //result return > boolean >
@@ -30,8 +30,28 @@ let b4 = lit_a1.filter((i) => i % 2); // 참인것만 남긴다
 let name = "kim";
 let age = 20;
 let user1 = { name, age };
-console.log(user1);
+// console.log(user1);
 // spread
 let c1 = [1, 2, 3, 4];
 let c2 = [0, 0, 0, ...c1];
-// -----
+// ----------------------------------------------------------------
+//promise
+let d = (a = "data_a") => {
+  return new Promise((resolve, reject) => {
+    //비동기 함수로직
+    setTimeout(() => {
+      resolve(`a : ${a}`);
+    }, Math.random() * 1000);
+  });
+};
+//순차 실행
+d()
+  .then((ret) => {
+    console.log(ret + "_1");
+    return d("data_ret");
+  })
+  .then((ret) => {
+    // resolve의 값 ret으로 반환
+    console.log(ret + "_2");
+    console.log("------");
+  });

@@ -4,7 +4,9 @@
   "description": "this is first project",
   "main": "index.js",
   "scripts": {
-    "test": "node test.js"
+    "test": "node test.js",
+    "ex_promise_async": "node ex_promise_async_await.js",
+    "ex_promise_then": "node ex_promise_then.js"
   },
   "author": "",
   "license": "ISC",

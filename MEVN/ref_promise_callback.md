@@ -7,3 +7,4 @@ https://velog.io/@coin46/%EB%B9%84%EB%8F%99%EA%B8%B0%EB%A5%BC-%EC%B2%98%EB%A6%AC
 ### 동기적 수행
 
 - 한번에 하나씩 순서대로 진행
+- 순차대로
