@@ -11,6 +11,7 @@
     "ex_promise_all": "node ex_promise_all.js",
     "ex_iterable": "node ex_iterable.js",
     "ex_generator": "node ex_generator.js"
+    ,"ex_map": "node ex_map.js"
   },
   "author": "",
   "license": "ISC",
