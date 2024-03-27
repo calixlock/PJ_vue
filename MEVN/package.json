@@ -8,7 +8,9 @@
     "ex_promise_async": "node ex_promise_async_await.js",
     "ex_promise_then": "node ex_promise_then.js",
     "ex_promise_error": "node ex_promise_error.js",
-    "ex_promise_all": "node ex_promise_all.js"
+    "ex_promise_all": "node ex_promise_all.js",
+    "ex_iterable": "node ex_iterable.js",
+    "ex_generator": "node ex_generator.js"
   },
   "author": "",
   "license": "ISC",
