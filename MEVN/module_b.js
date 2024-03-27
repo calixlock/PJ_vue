@@ -9,5 +9,5 @@ const cl = console.log;
 // import { s1, s2, s3 } from "./a.js";
 // ll(`s1,s2,s3 : ${s1}, ${s2}, ${s3}`);
 
-import { b, c } from "./a.js";
+import { b, c } from "./module_a.js";
 cl(b, c);
