@@ -1,3 +1,7 @@
+// ES모듈(import)
+//  package.json에 {"type": "module"}, 추가
+// 확장자 `.js`
+
 const cl = console.log;
 // import a, { s1, s2 } from "./a.js";
 // ll(a);

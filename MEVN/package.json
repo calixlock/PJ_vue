@@ -1,9 +1,9 @@
 {
   "name": "mevn",
   "version": "1.0.0",
-  "type": "module",
   "description": "this is first project",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "node test.js",
     "ex_promise_async": "node ex_promise_async_await.js",
