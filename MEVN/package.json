@@ -1,7 +1,7 @@
 {
   "name": "mevn",
   "version": "1.0.0",
-  "type":"module",
+  "type": "module",
   "description": "this is first project",
   "main": "index.js",
   "scripts": {
